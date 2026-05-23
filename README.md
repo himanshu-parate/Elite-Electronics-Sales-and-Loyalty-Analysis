@@ -26,7 +26,6 @@ Insights and recommendations are provided on the following key areas:
 - **Loyalty Program Success**: An assessment of the loyalty program on customer retention and sales.
 - **Regional Comparisons**: An evaluation of sales and orders by region.
 
-The cleaned dataset, along with all transformation and cleaning steps performed in Excel, can be found [here](https://github.com/Rohan-Morajkar/Elite-Electronics-Analysis/blob/main/Celan%20dataset.xlsx).
 
 An interactive PowerBI dashboard can be downloaded [here](https://github.com/himanshu-parate/Elite-Electronics-Sales-and-Loyalty-Analysis/blob/main/Elist%20Electronics%20Dashboard.pbix).
 
@@ -126,7 +125,6 @@ Below is the overview page from the PowerBI dashboard and more examples are incl
 - Launch **customer surveys** to understand post-COVID expectations and adapt offerings accordingly.
 - Consider expanding into **new product categories or services** (e.g., warranties, subscriptions) to diversify revenue sources.
 
+
 Himanshu Parate
 Data Analytics | SQL | Power BI | Python | Machine Learning
-# ⭐ If you like this project
-Give it a ⭐ on GitHub and connect with me!# Elite-Electronics-Sales-and-Loyalty-Analysis
