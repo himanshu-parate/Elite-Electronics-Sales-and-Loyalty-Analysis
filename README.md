@@ -30,7 +30,7 @@ The cleaned dataset, along with all transformation and cleaning steps performed 
 
 An interactive PowerBI dashboard can be downloaded [here](https://github.com/himanshu-parate/Elite-Electronics-Sales-and-Loyalty-Analysis/blob/main/Elist%20Electronics%20Dashboard.pbix).
 
-Targeted SQL queries regarding various business questions can be found [here](https://github.com/Rohan-Morajkar/Elite-Electronics-Analysis/blob/main/Buisness%20questions%20answered.sql).
+Targeted SQL queries regarding various business questions can be found [here](https://github.com/himanshu-parate/Elite-Electronics-Sales-and-Loyalty-Analysis/blob/main/Business%20Questions%20answered.sql).
 
 # Data Structure & Initial Checks
 
