@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛒 Retail Sales Analytics Project
+# 📊  Elist Electronics Sales & Business Analytics Project
 
 ### 📊 End-to-End Data Analysis using SQL | Python | Power BI
 
@@ -13,200 +13,136 @@
 
 ---
 
-# 📌 Problem Statement
+🧾 Project Overview
 
-This project analyzes retail sales data to uncover:
-- Customer behavior patterns
-- Product performance
-- Revenue trends
-- Regional sales differences
-- Payment method usage
+Elist Electronics is a global e-commerce company established in 2018, selling electronic products through its website and mobile application.
+This project analyzes 108,127+ transaction records to uncover insights across sales performance, product trends, regional behavior, and loyalty program effectiveness.
 
-The goal is to convert raw transactional data into **actionable business insights**.
+The goal is to identify key business problems behind declining performance and provide data-driven recommendations to improve revenue, retention, and overall growth.
 
----
+🎯 Objectives
+Analyze sales trends over time
+Evaluate product-level performance
+Assess loyalty program effectiveness
+Compare regional performance
+Provide actionable business recommendations
+🗂️ Dataset Information
 
-# 🧰 Tools & Technologies
+The dataset consists of four main tables:
 
-| Tool | Purpose |
-|------|--------|
-| MySQL | Data storage & querying |
-| SQL | Data analysis |
-| Python | Data cleaning & processing |
-| Pandas | Data manipulation |
-| Jupyter Notebook | Analysis environment |
-| Power BI | Data visualization |
+orders
+customers
+geo_lookup
+order_status
 
----
+📌 Total Records: 108,127
 
-# 📂 Project Architecture
+📈 Key Business Insights
+1. 📉 Sales Trend Analysis
+Sales peaked in May 2020 with:
+2,727 orders
+$797K+ revenue
+Continuous decline observed from 2021 onward (22 months YoY decline)
+2022 recorded lowest revenue (~$180K monthly low)
+Overall:
+📉 Orders ↓ 36%
+📉 Revenue ↓ 42%
+📉 AOV ↓ 9%
 
-```
-Retail-Sales-Analysis/
-│
-├── data/
-│   └── retail_sales_large.csv
-│
-├── sql/
-│   └── retail_sales_analysis.sql
-│
-├── python/
-│   ├── data_cleaning.py
-│   └── mysql_connection.py
-│
-├── notebooks/
-│   └── retail_analysis.ipynb
-│
-├── images/
-│   ├── dashboard.png
-│   ├── revenue.png
-│   ├── payment_analysis.png
-│
-└── README.md
-```
+💡 Insight: Post-pandemic demand normalization significantly impacted sales performance.
 
----
+2. 👥 Loyalty Program Analysis
+Members contributed ~62% of total revenue ($12.5M of $20.3M)
+Sharp decline in member dependency:
+2019: 93%
+2022: 42%
+Indicates:
+Reduced engagement
+Weak retention strategy
 
-# 📊 Dataset Overview
+💡 Insight: Loyalty program effectiveness has weakened significantly over time.
 
-The dataset contains:
+3. 📦 Product Performance Analysis
+Top 3 products contribute ~85% of orders
+Gaming Monitor
+Apple AirPods
+Samsung Charging Cable Pack
+Gaming Monitor:
+Highest revenue: $7.1M
+Apple AirPods:
+Highest volume: 35K orders
+Low AOV (~$160)
+MacBook Air:
+Highest AOV: $1,596
+ThinkPad Laptop:
+High AOV but low demand
 
-- Order ID
-- Order Date
-- Customer Name
-- Age
-- Gender
-- Product Category
-- Product Name
-- Quantity
-- Price
-- Discount %
-- Payment Method
-- Region
+💡 Insight: Revenue is highly concentrated in few products.
 
----
+4. 🌍 Regional Performance
+North America
+Highest revenue: $10M
+Strongest performance overall
+EMEA
+~$6M revenue, stable AOV
+APAC
+~$2.2M revenue, moderate demand
+LATAM
+Lowest performance: ~$1.5M
 
-# 📸 Project Preview
+💡 Insight: Strong regional imbalance in revenue distribution.
 
-## 📊 Dashboard Overview
+📊 Dashboard Preview
 
-<p align="center">
-  <img src="images/dashboard.png" width="800">
-</p>
+⚙️ Tools & Technologies Used
+Microsoft Excel (Data Cleaning & Transformation)
+SQL (Data Analysis & Business Queries)
+Power BI (Dashboard & Visualization)
+GitHub (Documentation & Project Hosting)
+💡 Key Recommendations
+🚀 1. Reignite Sales Growth
+Seasonal campaigns in high-performing quarters (Q2)
+Flash sales during low-performing months
+Reuse historical peak demand strategies
+🔄 2. Improve Loyalty Program
+Introduce tier-based rewards
+Member-only discounts and early access
+Reactivation campaigns for inactive users
+📦 3. Optimize Product Strategy
+Focus on top 3 revenue-generating products
+Bundle low-value accessories with premium items
+Push high-AOV underperformers (e.g., ThinkPad)
+🌍 4. Regional Strategy Enhancement
+Strengthen North America operations
+Adapt NA strategies for EMEA & APAC
+Improve LATAM penetration via pricing & marketing
+📉 5. Address Sales Decline
+Retarget 2020–2021 customer base
+Conduct customer feedback surveys
+Explore subscription/warranty-based revenue streams
+📌 Project Impact
 
----
+This analysis helps Elist Electronics:
 
-## 💰 Revenue Analysis
+Identify revenue leakage points
+Improve customer retention strategy
+Optimize product portfolio
+Strengthen regional marketing strategy
+Build data-driven decision-making culture
+📁 Repository Structure
+📦 Elist-Electronics-Analysis
+ ┣ 📊 Cleaned Dataset (Excel)
+ ┣ 📄 SQL Queries
+ ┣ 📈 Power BI Dashboard (.pbix)
+ ┣ 📑 README.md
+⭐ Future Improvements
+Predictive sales forecasting using ML
+Customer segmentation (RFM analysis)
+Churn prediction model
+Automated dashboard using real-time data pipeline
+👨‍💻 Author
 
-<p align="center">
-  <img src="images/revenue.png" width="800">
-</p>
-
----
-
-## 💳 Payment Analysis
-
-<p align="center">
-  <img src="images/payment_analysis.png" width="800">
-</p>
-
----
-
-# 🧠 Key Business Insights
-
-✔ High-value customers contribute majority of revenue  
-✔ Certain product categories dominate sales  
-✔ Online payment methods are most frequently used  
-✔ Regional differences strongly affect revenue  
-✔ Discounts significantly impact purchase behavior  
-
----
-
-# 🧾 Sample SQL Queries
-
-### 1️⃣ Total Revenue
-
-```sql
-SELECT SUM(price * quantity) AS total_revenue
-FROM retail_sales;
-```
-
----
-
-### 2️⃣ Top Customers
-
-```sql
-SELECT customer_name,
-       SUM(price * quantity) AS total_spent
-FROM retail_sales
-GROUP BY customer_name
-ORDER BY total_spent DESC
-LIMIT 5;
-```
-
----
-
-### 3️⃣ Revenue by Payment Method
-
-```sql
-SELECT payment_method,
-       SUM(price * quantity) AS revenue
-FROM retail_sales
-GROUP BY payment_method;
-```
-
----
-
-# 🐍 Python Workflow
-
-### 🔹 Data Cleaning
-- Removed null values
-- Standardized column types
-- Fixed inconsistent entries
-
-### 🔹 MySQL Connection
-
-```python
-import mysql.connector
-
-conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="your_password",
-    database="retail_project"
-)
-
-print("Connected Successfully!")
-```
-
----
-
-# 📈 Key KPIs
-
-- 💰 Total Revenue
-- 🧾 Total Orders
-- 👥 Unique Customers
-- 📦 Top Products
-- 💳 Payment Distribution
-
----
-
-# 🚀 Future Improvements
-
-- Machine Learning Sales Prediction
-- Customer Segmentation (Clustering)
-- Real-time dashboard streaming
-- Advanced forecasting models
-
----
-
-# 👨‍💻 Author
-
-**Himanshu Parate**
-
-Aspiring Data Analyst | SQL | Python | Power BI | Machine Learning
-
----
-
+Himanshu Parate
+Data Analytics | SQL | Power BI | Python | Machine Learning
 # ⭐ If you like this project
 Give it a ⭐ on GitHub and connect with me!# Elite-Electronics-Sales-and-Loyalty-Analysis
